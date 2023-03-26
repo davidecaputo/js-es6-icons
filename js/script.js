@@ -134,3 +134,22 @@ const icons = [
         color: 'blue'
     }
 ];
+
+
+const row = document.querySelector('.row');
+
+let cards = '';
+for (const card of icons) {
+    cards += `
+        <div class="col-12 col-md-4 col-lg-2">
+            <div class="card">
+                <div class="card-body text-center">
+                    <i class="${card.prefix}${card.family} ${card.prefix}${card.name} fs-1"></i>
+                    <p class="text-uppercase fw-bold">${card.name}</p>
+                </div>
+            </div>
+        </div>
+    `
+}
+
+row.innerHTML = cards;
