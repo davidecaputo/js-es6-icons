@@ -8,6 +8,16 @@
     BONUS
     1- modificare la struttura dati fornita e valorizzare la proprietà "color" in modo dinamico: generare in modo casuale un codice colore, sapendo che la notazione esadecimale è formata dal simbolo "#" seguito da 6 caratteri alfanumerici compresi tra 0 e 9 e A e F.
     2- popolare le options della select della milestone 3 dinamicamente.
+
+
+    <div class="col-12 col-md-4 col-lg-2">
+        <div class="card">
+            <div class="card-body text-center">
+              <i class="fa-solid fa-cat fs-1"></i>
+              <p class="text-uppercase fw-bold">cat</p>
+            </div>
+        </div>
+    </div>
 */
 
 const icons = [
