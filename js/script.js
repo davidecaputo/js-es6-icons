@@ -144,7 +144,7 @@ for (const card of icons) {
         <div class="col-12 col-md-4 col-lg-2">
             <div class="card">
                 <div class="card-body text-center">
-                    <i class="${card.prefix}${card.family} ${card.prefix}${card.name} fs-1"></i>
+                    <i class="${card.prefix}${card.family} ${card.prefix}${card.name} ${card.color} fs-1"></i>
                     <p class="text-uppercase fw-bold">${card.name}</p>
                 </div>
             </div>
