@@ -9,6 +9,23 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+    <header>
+        <div class="container-fluid pt-3">
+            <span class="text-info fw-bold fs-1">FontIcons</span>
+        </div>
+    </header>
+    <main class="bg-dark-subtle">
+        <div class="d-flex justify-content-center align-items-center gap-4 filter bg-info">
+            <span class="text-white fw-bo text-uppercase fs-4">Filtra per tipo</span>
+            <select name="filter" id="filter" class="form-select w-auto">
+                <option value="all" selected>All</option>
+                <option value="animal">Animal</option>
+                <option value="vegetable">Vegetable</option>
+                <option value="user">User</option>
+            </select>
+        </div>
+        <div class="container-fluid"></div>
+    </main>
     
     <script type="text/javascript" src="./js/script.js"></script>
 </body>
