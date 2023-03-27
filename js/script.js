@@ -136,20 +136,32 @@ const icons = [
 ];
 
 
-const row = document.querySelector('.row');
+// prendo la select
+const select = document.getElementById('filter');
 
-let cards = '';
-for (const card of icons) {
-    cards += `
-        <div class="col-12 col-md-4 col-lg-2">
-            <div class="card">
-                <div class="card-body text-center">
-                    <i class="${card.prefix}${card.family} ${card.prefix}${card.name} ${card.color} fs-1"></i>
-                    <p class="text-uppercase fw-bold">${card.name}</p>
+createCards();
+
+select.addEventListener('change', createCards);
+
+function createCards(){
+    // prendo la row
+    const row = document.querySelector('.row');
+    // prendo il valore della select
+    const valueOfSelect = select.value;
+    let cards = '';
+    for (const card of icons) {
+        if(valueOfSelect === card.type || valueOfSelect === 'all'){
+            cards += `
+                <div class="col-12 col-md-4 col-lg-2">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <i class="${card.prefix}${card.family} ${card.prefix}${card.name} ${card.color} fs-1"></i>
+                            <p class="text-uppercase fw-bold">${card.name}</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-    `
+            `
+        }
+    }
+    row.innerHTML = cards;
 }
-
-row.innerHTML = cards;
